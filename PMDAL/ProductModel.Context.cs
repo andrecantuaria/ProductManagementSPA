@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProductManagementSPA.Models
+namespace PMDAL
 {
     using System;
     using System.Data.Entity;

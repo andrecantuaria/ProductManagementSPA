@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
+using PMDAL;
+using ProductManagementSPA.Models;
 
 namespace ProductManagementSPA
 {
@@ -12,6 +15,13 @@ namespace ProductManagementSPA
     {
         protected void Application_Start()
         {
+            Mapper.Initialize(x =>
+            {
+                x.CreateMap<Product, ProductVM>();
+                x.CreateMap<Product, Product>();
+            });
+            
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
